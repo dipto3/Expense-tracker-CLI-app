@@ -1,0 +1,2 @@
+Amount:100 -- Category:Travel
+Amount:30000 -- Category:Shirt
