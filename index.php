@@ -25,6 +25,7 @@ while(true){
     echo "Press:2 for Add Expense\n";
     echo "Press:3 for View Income\n";
     echo "Press:4 for View Expene\n";
+    echo "Press:5 for View Total Balance\n";
     echo "Press:0 Exit Application!\n";
 
     $input = readline("Enter your option: ");
@@ -32,12 +33,12 @@ while(true){
     if ($input === '1') {
         $incomeAmount = readline("Enter income amount: ");
         $incomeCategory = readline("Enter income category: ");
-        $income = "Amount:$incomeAmount -- Category:$incomeCategory\n";
+        $income = "$incomeAmount -- $incomeCategory\n";
         saveFile('incomes.txt', $income);
     }elseif($input === '2') {
         $expenseAmount = readline("Enter expense amount: ");
         $expenseCategory = readline("Enter expense category: ");
-        $expenses = "Amount:$expenseAmount -- Category:$expenseCategory\n";
+        $expenses = "$expenseAmount -- $expenseCategory\n";
         saveFile('expenses.txt', $expenses);
     }elseif($input === '3') {
         echo "All Income\n";
@@ -52,6 +53,13 @@ while(true){
             list($amount, $category) = explode('--', $expense);
             echo "Amount: $amount | Category: $category\n";
         }
+    }elseif($input === '5') {
+        
+        $totalIncome = array_sum($incomes);
+        $totalExpense = array_sum($expenses);
+        $balance = $totalIncome - $totalExpense;
+ 
+        echo "\nTotal Balance: $balance\n";
     }elseif($input === '0') {
         
         exit;

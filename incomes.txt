@@ -1,5 +1,2 @@
-Amount:30000 -- Category:Salary
-Amount:1000 -- Category:Bonus
-Amount:2000 -- Category:new
-Amount:50000 -- Category:Juwellery
-
+1000 -- Bonus
+20000 -- Salary
