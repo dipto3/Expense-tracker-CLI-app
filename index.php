@@ -62,6 +62,7 @@ while(true){
         echo "\nTotal Balance: $balance\n";
     }elseif($input === '0') {
         
+        echo "Exiting the expense tracker system!.\n";
         exit;
     }else{
         echo "Please choose correct option!\n";
